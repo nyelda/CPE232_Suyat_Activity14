@@ -1,0 +1,25 @@
+- hosts: all
+  become: true
+  pre_tasks:
+
+  - name: install Glance (Ubuntu)
+    apt:
+      name:
+        - glance
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install Keystone (Ubuntu)
+    apt:
+      name:
+        - keystone
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install Nova (Ubuntu)
+    apt:
+      name:
+        - nova
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
