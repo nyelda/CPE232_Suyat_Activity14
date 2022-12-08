@@ -22,4 +22,3 @@
         - python3-openstackclient
       state: latest
     when: ansible_distribution == "Ubuntu"
-
